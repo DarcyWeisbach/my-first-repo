@@ -5,7 +5,9 @@ all_guests = {'アリス': {'リンゴ': 5, 'プレッツェル': 12},
 def total_brought(guests, item):
     num_brought = 0
     for k, v in guests.items():  # ❶
+        #itemsでキーとバリューを得る．バリューを得るだけならvalueを使う
         num_brought = num_brought + v.get(item, 0)  # ❷
+        #getはキーに存在していればバリューを返して，キーがなければ第2引数を返す．
     return num_brought
 
 print('持ち物の数:')
