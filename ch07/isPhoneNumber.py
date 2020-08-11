@@ -25,6 +25,7 @@ print(is_phone_number('Moshi moshi'))
 message = '明日415-555-1011に電話してください。オフィスは415-555-9999です。'
 for i in range(len(message)):
     chunk = message[i:i+12]   # ❶
+    #関数がtrueを返すならifが使える
     if is_phone_number(chunk):  # ❷
       print('電話番号が見つかりました: ' + chunk)
 print('完了')

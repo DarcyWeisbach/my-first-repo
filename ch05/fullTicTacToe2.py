@@ -12,7 +12,7 @@ def draw_board(board):
     # "board"は10個の文字列のリスト。インデックス0は無視。
    for i in range(7, 0, -3):
         print('   |   |')
-        print(' ' + ' | '.join(board[i:i+3]))
+        print(' ' + ' | '.join(board[i:i+3]))#それぞれ　|でリストを区切る感じ
         print('   |   |')
         if i > 1:
             print('-----------')
@@ -23,7 +23,7 @@ def input_player_letter():
     letter = ''
     while not (letter == 'X' or letter == 'O'):
         print('O=先手、X=後手、どちらにしますか？ (O or X)')
-        letter = input().upper()
+        letter = input().upper()#小文字にするメソッド
 
     # [プレーヤーの駒, コンピューターの駒]というリストを返す
     if letter == 'X':
@@ -35,6 +35,7 @@ def play_again():
     # プレーヤーがもう一度遊ぶと答えたならTrue、そうでなければFalseを返す。
     print('もう一度遊ぶ？ (yes or no)')
     return input().lower().startswith('y')
+    #.startswith()はオブジェクトの先頭文字と引数が一致してればtrueを返す．
 
 def make_move(board, letter, move):
     board[move] = letter
@@ -54,6 +55,7 @@ def is_winner(bo, le):
 def get_board_copy(board):
     # ボードのコピーを作る
     return board[:]
+    #スライスされたリストは別のインスタンスである
 
 def is_space_free(board, move):
     # ボードが空いていればTrue
