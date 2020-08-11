@@ -21,8 +21,8 @@ capitals = {'北海道': '札幌市', '青森県': '青森市', '岩手県': '�
 # 35個の問題集を作成する
 for quiz_num in range(35):
     # 問題と答えのファイルを作成する
-    quiz_file = open('capitalsquiz{}.txt'.format(quiz_num + 1), 'w')
-    answer_key_file = open('capitalsquiz_answers{}.txt'.format(quiz_num + 1), 'w')
+    quiz_file = open('.\\documents\\capitalsquiz{}.txt'.format(quiz_num + 1), 'w')
+    answer_key_file = open('.\\documents\\capitalsquiz_answers{}.txt'.format(quiz_num + 1), 'w')
 
     # 問題のヘッダを書く
     quiz_file.write('名前:\n\n日付:\n\n')
@@ -30,16 +30,16 @@ for quiz_num in range(35):
     quiz_file.write('\n\n')
 
     # 都道府県の順番をシャッフルする
-    prefectures = list(capitals.keys())
+    prefectures = list(capitals.keys())#明示しただけではなくdict_keysからlistへのcast
     random.shuffle(prefectures)
 
     for question_num in range(len(prefectures)):
         # 正解と誤答を取得する
-        correct_answer = capitals[prefectures[question_num]]
-        wrong_answers = list(capitals.values())
-        del wrong_answers[wrong_answers.index(correct_answer)]
-        wrong_answers = random.sample(wrong_answers, 3)
-        answer_options = wrong_answers + [correct_answer]
+        correct_answer = capitals[prefectures[question_num]]#県名を入れて都市をget
+        wrong_answers = list(capitals.values())#都市をすべて得る
+        del wrong_answers[wrong_answers.index(correct_answer)]#都市から正解を削除
+        wrong_answers = random.sample(wrong_answers, 3)#都市の中から3つ選ぶ
+        answer_options = wrong_answers + [correct_answer]#listの結合
         random.shuffle(answer_options)
 
         # 問題文と回答選択肢を問題ファイルに書く

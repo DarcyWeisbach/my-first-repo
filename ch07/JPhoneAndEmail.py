@@ -21,7 +21,7 @@ phone_regex = re.compile(r'''(
     (\d{3,4})                        # 加入者番号
     (\s*(ext|x|ext.)\s*(\d{2,5}))?   # 内線番号
     )''', re.VERBOSE)
-
+#冗長モードの緩和
 
 # 電子メールの正規表現を作る。
 email_regex = re.compile(r'''(

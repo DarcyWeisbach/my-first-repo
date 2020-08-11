@@ -1,3 +1,7 @@
+"""
+isX()についての使い方
+"""
+
 while True:
     print('年齢を入力してください:')
     age = input()
