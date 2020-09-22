@@ -9,8 +9,8 @@ cwdとはcurrent working directoryのこと
 ./　は現在のディレクトリ
 ../　は親ディレクトリ
 
-os.path.abspath(path)　相対パスを絶対パスを得る．
-os.path.relpath()　相対パス
+os.path.abspath(path)：対パスを絶対パスを得る．
+os.path.relpath()：相対パス
 
 osモジュールはなければエラーが出て終了してしまうため
 os.path.exists()
@@ -28,3 +28,5 @@ batファイルをもちいて実行する．
 引数にspamとすれば再びクリップボードにspamに紐づけられた文章がペーストできるようになる．
 
 pywはコマンドラインを出さずに実行されるらしい
+
+shelveモジュールは棚を模擬したバイナリファイルとして保存することができる．
