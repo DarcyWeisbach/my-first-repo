@@ -9,8 +9,8 @@ cwdとはcurrent working directoryのこと
 ./　は現在のディレクトリ
 ../　は親ディレクトリ
 
-os.path.abspath(path)　相対パスを絶対パスを得る．
-os.path.relpath()　相対パス
+os.path.abspath(path)：対パスを絶対パスを得る．
+os.path.relpath()：相対パス
 
 osモジュールはなければエラーが出て終了してしまうため
 os.path.exists()
@@ -21,3 +21,12 @@ shelveで変数を保存しておくために
 .bak .dat .dir　が作成される．
 
 {}.format(number)みたいな入力方法も覚えておく
+
+mcbは一回コピーしたものを記憶しておくためのもの
+batファイルをもちいて実行する．
+引数にsave spamとすれば，クリップボードに存在しているものがspamに紐づけられて保存される．
+引数にspamとすれば再びクリップボードにspamに紐づけられた文章がペーストできるようになる．
+
+pywはコマンドラインを出さずに実行されるらしい
+
+shelveモジュールは棚を模擬したバイナリファイルとして保存することができる．
