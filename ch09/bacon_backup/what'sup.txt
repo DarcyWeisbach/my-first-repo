@@ -1,0 +1,1 @@
+shutil.copytreeの練習のためにbaconファイルの下に置いておきます．
